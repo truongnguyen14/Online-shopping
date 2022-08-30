@@ -1,8 +1,8 @@
 import React from "react";
 import Shopping from "./pages/Shopping";
 import Nav from "./components/Nav";
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 
