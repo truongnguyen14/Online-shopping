@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 export default function Shopping(){
     return(
         <div>
-            <Nav/>
             <Container/>
             <Footer/>
         </div>

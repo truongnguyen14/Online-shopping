@@ -1,0 +1,29 @@
+.cart-container{
+    padding: 30px;
+    background-color: #EFEBF1;
+    width: 100%;
+    min-height: 500px;
+}
+
+.shopping-cart{
+    background-color: white;
+    padding: 20px;
+    position: relative;
+   
+}
+.shopping-cart > h1{
+    margin-bottom: 10px;
+}
+
+.item-container{
+ margin-bottom: 20px;
+ display: flex;
+ flex-direction: column;
+    
+}
+.total-price{
+    display: inline;
+    align-self:flex-end;
+    font-size: large;
+    padding-right: 30px;
+}
