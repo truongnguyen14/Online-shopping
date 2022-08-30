@@ -14,8 +14,8 @@ export default function App(){
                 <Nav />
                 <Routes>
                     <Route index element={<Shopping/>}/>
-                    <Route path="/login" element={<Signin/>}/>
-                    <Route path="/signup" element={<Signup/>}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/register" element={<Register/>}/>
                     <Route path="/cart" element={<Cart/>}/>
                 </Routes>
             </BrowserRouter> 
