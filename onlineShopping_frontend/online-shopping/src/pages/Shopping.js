@@ -1,12 +1,12 @@
 import React from "react";
-import Nav from "../components/Nav";
 import Container from "../components/Container";
 import Footer from "../components/Footer";
 
-export default function Shopping(){
+export default function Shopping(props){
+    const {products, onAdd} = props 
     return(
         <div>
-            <Container/>
+            <Container onAdd={onAdd} products={products}/>
             <Footer/>
         </div>
     )

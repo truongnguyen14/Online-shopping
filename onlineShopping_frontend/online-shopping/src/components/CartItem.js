@@ -1,19 +1,19 @@
 import React from "react";
-import img from "./shoes.png"
 import "./CartItem.css"
-export default function CartItem(){
+export default function CartItem(props){
+    const {item,onAdd} = props
     return(
-          <div className="item-cart">
+          <div key={item.id} className="item-cart">
                         <div className="item-description">
             
-                            <img src={img} alt="cc"/>
+                            <img src={item.image} alt="cc"/>
                             <div className="description">
-                                <div className="name"> Mochimochi </div>
-                                <div className="des">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+                                <div className="name"> {item.name} </div>
+                                <div className="des">{item.price}</div>
                             </div>
                         </div>
                         <div className="button-container">
-                            <div className="price">Price: 10</div>
+                            <div className="price">{item.price}</div>
                             <button>delete</button>    
                         </div>
             </div>

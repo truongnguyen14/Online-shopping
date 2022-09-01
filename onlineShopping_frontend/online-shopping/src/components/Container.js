@@ -3,7 +3,8 @@ import Item from "./Item.js"
 import List from "./List.js"
 import Select from "./Select.js";
 
-export default function Container(){
+export default function Container(props){
+    const {products,onAdd} = props
     return(
         <div className="main-container">
             <div className="title">
@@ -15,11 +16,11 @@ export default function Container(){
                 <List/>
             </div>  
             <div className="items-container first-column">
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
+                {
+                    products.map((product)=>(
+                        <Item key={product.id} product={product} onAdd={onAdd} />
+                    ))
+                }
             </div>
             <Select/>
         </div>
