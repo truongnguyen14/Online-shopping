@@ -55,3 +55,7 @@
     border: none;
     border-radius: 5px;
 }
+.item-cart>.button-container>button:hover{
+    cursor: pointer;
+    opacity: 50%;
+}

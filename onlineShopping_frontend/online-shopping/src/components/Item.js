@@ -10,7 +10,7 @@ export default function Item(props){
              <div className="item-sale">Sale up to 50%</div>
              <div className="item-description">{product.name}</div>
              <div className="price red">$ {product.price}</div>
-             <button onClick={onAdd}>Add to cart</button>
+             <button onClick={()=>onAdd(product)}>Add to cart</button>
         </div>
     )
 }

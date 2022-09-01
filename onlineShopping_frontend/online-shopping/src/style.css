@@ -59,6 +59,33 @@ a:active {
     overflow: hidden;
     text-align: center;
 }
+.nav_container .logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+.nav_container .options .cart-link{
+    position: relative;
+}
+.nav_container .options .cart-link .item-amount{
+    position: absolute;
+    left: 90%;
+    bottom: 75%;
+    background-color: #A81111;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 10px;
+
+}
+.nav_container .logo-container > div{
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #A81111;
+    text-decoration: none;
+    font-size: 20px;
+}
 .logo{
     margin-left: 30px;
     height: 50px;
@@ -272,3 +299,4 @@ a:active {
 .footer-logo{
     transform: translateX(-50px);
 }
+

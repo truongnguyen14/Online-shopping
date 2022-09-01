@@ -1,9 +1,9 @@
 import React from "react";
 import "./CartItem.css"
 export default function CartItem(props){
-    const {item,onAdd} = props
+    const {item,onAdd,onRemove} = props
     return(
-          <div key={item.id} className="item-cart">
+          <div className="item-cart">
                         <div className="item-description">
             
                             <img src={item.image} alt="cc"/>
@@ -13,8 +13,8 @@ export default function CartItem(props){
                             </div>
                         </div>
                         <div className="button-container">
-                            <div className="price">{item.price}</div>
-                            <button>delete</button>    
+                            <div className="price">Amount: {item.qty} X ${item.price}</div>
+                            <button  onClick={onRemove}>delete</button>    
                         </div>
             </div>
     )

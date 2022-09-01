@@ -4,7 +4,9 @@ import List from "./List";
 export default function Footer(){
     return(
         <div className="footer-container">
-            <img className="footer-logo" src={image} alt="this is an logo" />
+
+                <img className="footer-logo" src={image} alt="this is an logo" />
+  
             <div className="footer-infos">
                 <div className="footer-info-container">
                     <h1 className="footer-title">About</h1>
