@@ -29,7 +29,7 @@ function Productdetail() {
             </div>
 	    </div>
     
-    <div>
+    <div className='relatedproduct'>
         <h2>Related products</h2>
         <div className='products'>
            
