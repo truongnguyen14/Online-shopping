@@ -1,6 +1,5 @@
 import React, {useContext,useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
-import {GlobalState} from '../../GlobalState'
 import './productdetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import ProductItem from './util/productitem/ProductItem'
