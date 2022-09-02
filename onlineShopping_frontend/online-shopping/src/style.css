@@ -71,12 +71,12 @@ a:active {
 .nav_container .options .cart-link .item-amount{
     position: absolute;
     left: 90%;
-    bottom: 75%;
+    bottom: 70%;
     background-color: #A81111;
     color: white;
-    padding: 5px;
+    padding: 6px;
     border-radius: 50%;
-    font-size: 10px;
+    font-size: 12px;
 
 }
 .nav_container .logo-container > div{
