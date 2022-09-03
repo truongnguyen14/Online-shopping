@@ -1,29 +1,41 @@
-import React, {useContext,useState, useEffect} from 'react'
-import {useParams, Link} from 'react-router-dom'
-
-import { useLocation } from "react-router-dom";
+import React, {useState, useEffect} from 'react'
 import './productdetail.css'
+import Item from '../components/Item'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { useLocation } from "react-router-dom";
 
 function Productdetail(props) {
-  const {cartItems} = props
+    const {products,onAdd} = props 
+    const [detailproduct, setDetailproduct] = useState({})
+    const location = useLocation();
+    const id = location.pathname.split("/")[3];
+    const relateproduct = products.find((e)=> e.id === id)
+    
+    useEffect(() => {
+        const getProduct = async () => {
+          try {
+            const thisproduct = products.find((e) => e.id === id)
+            thisproduct && setDetailproduct(thisproduct)
+          } catch {}
+        };
+        getProduct();
+      }, [id]);
+
   return (
     <div>
-        <div class="productinfo container">
-            <div class="product">			
-                        <div class="row">
-                        <div class="col-md-5 box1">
-                            <img src="#" class="poster-image"></img>
+        <div className="productinfo container">
+            <div className="product">			
+                        <div className="row">
+                        <div className="col-md-5 box1">
+                            <img src={detailproduct.image} class="poster-image"></img>
                         </div>
-                        <div class="col align-self-center box2">
-                            <h1 class="productinfo-title">'.$row['name'].'</h1>
-                            <h5>Description: '.$row['moviedescription'].'</h5>
-                            <h5>Genre: '.$row['genre'].'</h5>
-                            <h5>Rated: '.$row['rated'].'</h5>
-                            <h5>Rating: '.$row['rating'].'</h5>
-                            <div class="productinfo button">
-                                <a href="#" class="btn btn-primary">Add to cart</a>
+                        <div className="col align-self-center box2">
+                            <h1 className="productinfo-title">{detailproduct.name}</h1>
+                            <h5>Description: {detailproduct.description}</h5>
+                            <h5>Price: {detailproduct.price}</h5>
+                            <h5> Category: {detailproduct.cat}</h5>
+                            <div className="productinfo button">
+                                <button className="btn btn-primary" onClick={()=>onAdd(detailproduct)}>Add to cart</button>
                             </div>
                         </div>
                     </div>			
@@ -33,7 +45,12 @@ function Productdetail(props) {
     <div className='relatedproduct'>
         <h2>Related products</h2>
         <div className='products'>
-           
+           {
+                    products.map((product)=>(
+                       product.cat === detailproduct.cat?
+                        <Item key={product.id} product={product} onAdd={onAdd} />:null
+                    ))
+                }
         </div>
     </div></div>
    
