@@ -23,13 +23,13 @@
 	z-index: 10;
 }
 .productinfo.button .btn.btn-primary{
-	background-color: orange;
-	border: 1px solid orange;
+	background-color: red;
+	border: 1px solid red;
 	width: 25%;
 }
 .productinfo.button .btn.btn-primary:hover{
 	background-color: white;
-	color: orange;
+	color: red;
 }
 
 .relatedproduct{
