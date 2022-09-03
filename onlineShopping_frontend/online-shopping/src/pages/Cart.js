@@ -15,7 +15,6 @@ export default function Cart(props){
                 <h1>
                     Shopping Cart
                 </h1>
-            
                 <div className="item-container">
                     {cartItems.length === 0 && <div>Cart is Empty</div>}
                     {cartItems.map((item)=>(

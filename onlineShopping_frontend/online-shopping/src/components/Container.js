@@ -1,13 +1,10 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Item from "./Item.js"
 import List from "./List.js"
 import Select from "./Select.js";
 
 export default function Container(props){
     const {products,onAdd} = props
-    const location = useLocation() 
-    const cat = location.pathname.split("/")[2]
     return(
         <div className="main-container">
             <div className="title">

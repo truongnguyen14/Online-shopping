@@ -1,12 +1,14 @@
 import React, {useContext,useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
-import {GlobalState} from '../../GlobalState'
+import { useLocation } from "react-router-dom";
 import './productdetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-//import ProductItem from './util/productitem/ProductItem'
 
-function Productdetail() {
 
+function Productdetail(props) {
+  const {cartItems} = props
+  const location = useLocation() 
+  const cat = location.pathname.split("/")[2]
   return (
     <div>
         <div class="productinfo container">
