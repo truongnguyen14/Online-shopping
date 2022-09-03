@@ -1,6 +1,7 @@
 import React from "react";
-import shoes from "./shoes.png"
-import perry from "./perry.png"
+import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './item.css'
 
 export default function Item(props){
     const {product,onAdd} = props 
@@ -8,9 +9,11 @@ export default function Item(props){
         <div className="item">
              <img className="item-image" src={product.image} alt="this is a showes of an item" />
              <div className="item-sale">Sale up to 50%</div>
-             <div className="item-description">{product.name}</div>
+             <Link to= {`/product/find/${product.id}`} className="item-description"              >
+                   <div>{product.name}</div>     
+                    </Link>
              <div className="price red">$ {product.price}</div>
-             <button onClick={()=>onAdd(product)}>Add to cart</button>
+             <button className="btn btn-primary" onClick={()=>onAdd(product)}>Add to cart</button>
         </div>
     )
 }
