@@ -8,8 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Productdetail(props) {
   const {cartItems} = props
-  const location = useLocation() 
-  const cat = location.pathname.split("/")[2]
   return (
     <div>
         <div class="productinfo container">
