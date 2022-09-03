@@ -1,9 +1,7 @@
 import React, {useContext,useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
-<<<<<<< HEAD
+
 import { useLocation } from "react-router-dom";
-=======
->>>>>>> 2a1253ac22a8d96feacb6eb39e7081701c451494
 import './productdetail.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
