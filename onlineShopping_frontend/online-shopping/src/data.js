@@ -24,7 +24,8 @@ export const data = {
   ],
 };
 
-export const categoriesData = [
+export const categoriesData = {
+  categories: [
   {
     id:1,
     title: "others",
@@ -37,5 +38,7 @@ export const categoriesData = [
     id:3,
     title: "technologies",
   },
-]
+  ]
+}
+
 
