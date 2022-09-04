@@ -5,15 +5,16 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import Productdetails from "./pages/Productdetail"
-import {data} from "./data";
+import {categoriesData, data} from "./data";
 import { BrowserRouter,Routes,Route,Navigate  } from "react-router-dom";
 import Container from "./components/Container";
-
+import Categories from "./pages/Categories";
 
 export default function App(){
     // user check
     const user = false
     const {products} = data;
+     const {categories} = categoriesData;
     const [cartItems, setCartItems] = React.useState([])
     const money = React.useRef(0)
     React.useEffect(()=>{
@@ -57,7 +58,7 @@ export default function App(){
                     <Route path="/register" element={<Register/>}/>
                     <Route path="/cart" element={<Cart onAdd={onAdd} onRemove={onRemove} money={money.current} cartItems={cartItems}/>}/>
                     <Route path="/product/find/:id" element={<Productdetails products={products} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>} />
-                    <Route path="/products/:categories" element={<Container onAdd={onAdd} products={products}/>} />
+                    <Route path="/categories/:title" element={<Categories onAdd={onAdd} products={products} categories={categories}/>} />
                 </Routes>
             </BrowserRouter> 
         </div>
