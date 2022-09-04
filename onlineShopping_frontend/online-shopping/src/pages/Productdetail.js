@@ -47,7 +47,7 @@ function Productdetail(props) {
         <div className='products'>
            {
                     products.map((product)=>(
-                       product.cat === detailproduct.cat?
+                        product.id != detailproduct.id && product.cat === detailproduct.cat?
                         <Item key={product.id} product={product} onAdd={onAdd} />:null
                     ))
                 }
