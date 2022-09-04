@@ -1,16 +1,13 @@
 import React from "react";
 import { categoriesData } from "../data";
-import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 export default function List(){
-    
-    const location = useLocation()
-    const cat = location.pathname.split("/")[2]
-    console.log(cat)
+    const {categories} = categoriesData
     return(
             <ul className="list small">
-                {categoriesData.map((data)=>
-                  <Link to={`/products/${data.title}`}>
+                {categories.map((data)=>
+                  <Link to={`/categories/${data.title}`}>
                           <li>{data.title}</li>  
                   </Link>
                 )}
