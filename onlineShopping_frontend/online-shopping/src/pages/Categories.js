@@ -25,7 +25,7 @@ function Categories(props){
     return(
         <div className="main-container">
             <div className="title">
-                <h2>Categories</h2>
+                <h2>Categories: {categoriespage.title}</h2>
             </div>
             <div className="second-column padding margin">
                 <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"15px"}}>Categories</p>
