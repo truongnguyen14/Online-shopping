@@ -1,6 +1,7 @@
 import React from "react";
 import image from "./logo192.png"
 import List from "./List";
+import "./footer.css"
 export default function Footer(){
     return(
         <div className="footer-container">
@@ -16,11 +17,7 @@ export default function Footer(){
                 </div>
                  <div className="footer-info-container">
                     <h1 className="footer-title">Categories</h1>
-                         <ul className="list small-white">
-                            <li><a>Others</a></li>
-                            <li>Food</li>
-                            <li>Clothes</li>
-                        </ul>
+                         <List/>
                 </div>
             </div>
             <div className="copy-right">
