@@ -1,4 +1,5 @@
 import React from "react";
+import "./list.css"
 import { categoriesData } from "../data";
 import { Link } from "react-router-dom";
 
