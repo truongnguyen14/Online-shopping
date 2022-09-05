@@ -1,9 +1,9 @@
 .item .btn.btn-primary{
-	background-color: red;
-	border: 1px solid red;
+	background-color: #A81111;
+	border: 1px solid #A81111;
 	width: 50%;
 }
 .item .btn.btn-primary:hover{
 	background-color: white;
-	color: red;
+	color: #A81111;
 }
