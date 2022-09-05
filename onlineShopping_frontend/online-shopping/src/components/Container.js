@@ -12,7 +12,7 @@ export default function Container(props){
                 <p className="small">Our most popular products based on sales. Updated hourly.</p>
             </div>
             <div className="second-column padding margin">
-                <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"15px"}}>Categories</p>
+                <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"25px"}}>Categories</p>
                 <List/>
             </div>  
             <div className="items-container first-column">
