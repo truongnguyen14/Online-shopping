@@ -17,7 +17,12 @@ export default function Item(props){
                                 <div>{product.name}</div>     
                         </Link>
                     <div className="price red">$ {product.price}</div>
-                    <button className="btn btn-primary" onClick={()=>onAdd(product)}>Add to cart</button>
+                    <div style={{"display":"flex","gap":"20px"}}>
+                        <button className="btn btn-primary" onClick={()=>onAdd(product)}>Add to cart</button>
+                        <Link to= {`/product/find/${product.id}`} >
+                            <button className="btn btn-normal" > Details</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>        

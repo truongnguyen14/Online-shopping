@@ -23,18 +23,24 @@ function Productdetail(props) {
 
   return (
     <div>
+         <div className="main-container">
+            <div className="title">
+                    <h1 className="title-font">Prime Item description</h1>
+                    <p className="small">Our most popular products based on sales. Updated hourly.</p>
+            </div>
+         </div>
         <div className="productinfo container">
             <div className="product">			
                         <div className="row">
                         <div className="col-md-5 box1">
                             <img src={detailproduct.image} class="poster-image"></img>
                         </div>
-                        <div className="col align-self-center box2">
-                            <h1 className="productinfo-title">{detailproduct.name}</h1>
-                            <h5>Description: {detailproduct.description}</h5>
-                            <h5>Price: {detailproduct.price}</h5>
-                            <h5> Category: {detailproduct.cat}</h5>
-                            <div className="productinfo button">
+                        <div className="col box2">
+                            <h1 className="productinfo-title"><b>{detailproduct.name}</b></h1>
+                            <h5 style={{"lineHeight":"1px","fontSize":"15px","letter-spacing": "1px"}}>{detailproduct.description}</h5>
+                            <h5 style={{"margin-top":"40px","fontSize":"30px","color":"#6E7F9D"}}>$ {detailproduct.price}</h5>
+                            <h5><b>Categories: </b>{detailproduct.cat}</h5>
+                            <div className="productinfo button" style={{"alignSelf":"center"}}>
                                 <button className="btn btn-primary" onClick={()=>onAdd(detailproduct)}>Add to cart</button>
                             </div>
                         </div>

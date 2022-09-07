@@ -1,9 +1,23 @@
+.item .btn{
+	font-size: 15px;
+	width: 50%;
+	color: white;
+}
 .item .btn.btn-primary{
 	background-color: #A81111;
 	border: 1px solid #A81111;
-	width: 50%;
+}
+.item .btn.btn-normal{
+	background-color: #6E7F9D;
+	border: 1px solid #6E7F9D;
+	width: 100%;
 }
 .item .btn.btn-primary:hover{
 	background-color: white;
 	color: #A81111;
+	
+}
+.item .btn.btn-normal:hover {
+	background-color: white;
+	color: #6E7F9D;
 }
