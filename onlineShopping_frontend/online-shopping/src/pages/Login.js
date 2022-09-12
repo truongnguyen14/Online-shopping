@@ -47,7 +47,7 @@ function Login(){
     const loginSubmit = async e =>{
         e.preventDefault()
         try {
-            await axios.post('/user/login', {...user})
+            await axios.post('/api/login', {...user})
   
             localStorage.setItem('firstLogin', true)
             
@@ -59,7 +59,7 @@ function Login(){
 
     return (
         <div className="loginpage">
-            <form /*onSubmit={loginSubmit}*/>
+            <form onSubmit={loginSubmit}>
                 <h2>Login</h2>
                 <input type="email" name="email" required 
                 placeholder="Email" value={user.email} onChange={onChangeInput} onBlur={Validate}/>

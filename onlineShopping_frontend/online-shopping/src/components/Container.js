@@ -1,11 +1,17 @@
-import React from "react";
+import React,{useContext} from "react";
 import Item from "./Item.js"
 import List from "./List.js"
 import Select from "./Select.js";
-
+import { GlobalState } from "../GlobalState.js";
+import Loading from "../utils/Loading.js";
 export default function Container(props){
-    const {products,onAdd} = props
+    const state = useContext(GlobalState)
+    const [products] = state.productsAPI.products
+    console.log(products)
+    // const {products,onAdd} = props
+    const {onAdd} = props
     return(
+        <>
         <div className="main-container">
             <div className="title">
                 <h1 className="title-font">Prime Available items</h1>
@@ -24,5 +30,7 @@ export default function Container(props){
             </div>
             <Select/>
         </div>
+        {products.length === 0 && <Loading/>}
+        </>
     )
 }

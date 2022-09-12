@@ -65,7 +65,7 @@ function Register() {
   const registerSubmit = async e =>{
     e.preventDefault()
     try {
-      await axios.post('/user/register', {...user})
+      await axios.post('api/register', {...user})
 
       localStorage.setItem('firstLogin', true)
 
@@ -93,7 +93,7 @@ function Register() {
          {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
         <div className="row">
           <button id="submit" type="submit">Create your RMIT prime account</button>
-          <Link to="/login">If you already have account then why are you here? please move to the login page</Link>
+          <Link to="/login">If you already have account? clcik here to move to the login page</Link>
         </div>
       </form>
     </div>
