@@ -57,6 +57,7 @@ export default function App(){
                     <Routes>
                         <Route index element={<Shopping onAdd={onAdd} products = {products} />}/>
                         <Route path="/login" element={user ? <Navigate to="/"/>:<Login/>}/>
+                        <Route path="/" element={<Container/>}/>
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/cart" element={<Cart onAdd={onAdd} onRemove={onRemove} money={money.current} cartItems={cartItems}/>}/>
                         <Route path="/product/find/:id" element={<Productdetail onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>} />

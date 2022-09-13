@@ -7,6 +7,7 @@ import Loading from "../utils/Loading.js";
 export default function Container(props){
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
+    const [isAdmin] = state.userAPI.isAdmin
     console.log(products)
     // const {products,onAdd} = props
     const {onAdd} = props
@@ -24,7 +25,7 @@ export default function Container(props){
             <div className="items-container first-column">
                 {
                     products.map((product)=>(
-                        <Item key={product.id} product={product} onAdd={onAdd} />
+                        <Item key={product.id} product={product} onAdd={onAdd} isAdmin={isAdmin} />
                     ))
                 }
             </div>

@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
+    padding-bottom: 20px;
   border-bottom: rgb(204, 212, 214) solid;
 }
 .item-description {
@@ -54,8 +55,23 @@
     color: white;
     border: none;
     border-radius: 5px;
+    min-width: 100px;
 }
 .item-cart>.button-container>button:hover{
     cursor: pointer;
     opacity: 50%;
+}
+.payment{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px;
+}
+.payment > button{
+    padding: 10px;
+    background-color: black;
+    text-transform: capitalize;
+    color: white;
+    border: none;
+    font-size: large;
+    min-width: 200px;
 }

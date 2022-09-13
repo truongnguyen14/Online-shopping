@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import "./Cart.css"
-import Item from "../components/Item"
-import img from "../components/shoes.png" 
 import CartItem from "../components/CartItem"
+import { GlobalState } from "../GlobalState"
 export default function Cart(props){
-    const {cartItems,onAdd,onRemove,money} = props
-    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty,0)
-    const totalPrice = itemsPrice
- 
-      
+    const state = useContext(GlobalState)
+    const [cart] = state.userAPI.cart
+    const [total,setTotal] = React.useState(0)
+    
+    
+    
+
+    if(cart.length === 0)
+        return <h2 style={{textAlign:"center",fontSize:"5rem"}}>Cart Empty</h2>
     return(
         <div className="cart-container">
             <div className = "shopping-cart">
@@ -16,12 +19,15 @@ export default function Cart(props){
                     Shopping Cart
                 </h1>
                 <div className="item-container">
-                    {cartItems.length === 0 && <div>Cart is Empty</div>}
-                    {cartItems.map((item)=>(
-                        <CartItem key={item.id} item={item} onRemove={()=>onRemove(item)} onAdd={()=>onAdd(item)}/>
+                
+                    {cart.map((item)=>(
+                        <CartItem key={item._id} item={item} />
                     ))}
 
-                    <div className="total-price">Subtotal {cartItems.length} items: <b style={{"marginLeft":"40px","fontSize":"30px"}}>$ {totalPrice}</b></div>
+                    <div className="total-price">Subtotal  items: <b style={{"marginLeft":"40px","fontSize":"30px"}}>$ {total}</b></div>
+                </div>
+                <div className="payment">
+                    <button>Payment</button>
                 </div>
             </div>
         </div>
