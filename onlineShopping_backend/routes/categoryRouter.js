@@ -3,11 +3,11 @@ const categoryCtrl = require('../controllers/categoryCtrl')
 const auth = require('../middlewares/auth')
 const authAdmin = require('../middlewares/authAdmin')
 
-router.route('/category')
+router.route('/categories')
   .get(categoryCtrl.getCategories)
   .post(auth, authAdmin, categoryCtrl.createCategory)
 
-router.route('/category/:id')
+router.route('/categories/:id')
   .delete(auth, authAdmin, categoryCtrl.deleteCategory)
   .put(auth, authAdmin, categoryCtrl.updateCategory)
 
