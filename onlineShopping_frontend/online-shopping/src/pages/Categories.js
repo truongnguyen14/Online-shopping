@@ -1,31 +1,34 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import { useParams } from "react-router-dom";
+import { GlobalState } from '../GlobalState';
 import Item from '../components/Item'
 import List from '../components/List'
 import '../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useLocation } from "react-router-dom";
 
 function Categories(props){
-    const {categories,products,onAdd} = props
-    const [categoriespage, setCategoriespage] = useState({})
-    const location = useLocation();
-    const title = location.pathname.split("/")[2]; 
+    const {onAdd} = props
+    const [categoriespage, setCategoriespage] = useState([])
+    const params = useParams()
+    const state = useContext(GlobalState)
+    const [categories] = state.categoriesAPI.categories
+    const [products] = state.productsAPI.products
 
     useEffect(() => {
-        const getCategories = async () => {
-          try {
-            const thiscategories = categories.find((e) => e.title === title)           
-            thiscategories && setCategoriespage(thiscategories)
-            console.log(thiscategories)
-          } catch {}
-        };
-        getCategories();
-      }, [title]);
+        if(params){
+          categories.forEach(category =>{
+            if(category.name === params.name) setCategoriespage(category)
+          })
+        }
+      }, [params,categories]);
+
+    console.log(categoriespage.name)
+    if(categoriespage.length === 0 ) return null
 
     return(
         <div className="main-container">
             <div className="title">
-                <h2>Categories: {categoriespage.title}</h2>
+                <h2>Categories: {categoriespage.name}</h2>
             </div>
             <div className="second-column padding margin">
                 <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"15px"}}>Categories</p>
@@ -34,7 +37,7 @@ function Categories(props){
             <div className="items-container first-column">
             {
                     products.map((product)=>(
-                         product.cat === categoriespage.title?
+                         product.category === categoriespage.name?
                         <Item key={product.id} product={product} onAdd={onAdd} />:null
                     ))
                 }
