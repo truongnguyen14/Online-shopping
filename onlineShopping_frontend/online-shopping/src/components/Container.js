@@ -1,7 +1,6 @@
 import React,{useContext} from "react";
 import Item from "./Item.js"
 import List from "./List.js"
-import Select from "./Select.js";
 import { GlobalState } from "../GlobalState.js";
 import Loading from "../utils/Loading.js";
 export default function Container(props){
@@ -29,7 +28,6 @@ export default function Container(props){
                     ))
                 }
             </div>
-            <Select/>
         </div>
         {products.length === 0 && <Loading/>}
         </>
