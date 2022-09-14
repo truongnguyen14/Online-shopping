@@ -5,6 +5,7 @@ import Item from '../components/Item'
 import List from '../components/List'
 import '../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from '../components/Footer';
 
 function Categories(props){
     const {onAdd} = props
@@ -26,12 +27,13 @@ function Categories(props){
     if(categoriespage.length === 0 ) return null
 
     return(
+        <div>
         <div className="main-container">
             <div className="title">
                 <h2>Categories: {categoriespage.name}</h2>
             </div>
             <div className="second-column padding margin">
-                <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"15px"}}>Categories</p>
+                <p className="small" style={{fontWeight:"bold",paddingBottom:"4px",fontSize:"25px"}}>Categories</p>
                 <List/>
             </div>  
             <div className="items-container first-column">
@@ -42,6 +44,8 @@ function Categories(props){
                     ))
                 }
             </div>
+        </div>
+        <Footer/>
         </div>
     )
 }
