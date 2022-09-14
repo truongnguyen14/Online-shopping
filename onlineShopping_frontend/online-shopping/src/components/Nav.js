@@ -46,7 +46,7 @@ export default function Nav(props){
                 <div><Link to="/" style={{"textDecoration":"none"}} onClick={logoutUser}>Logout</Link></div>
                 <div className="cart-link">
                     <Link to="/cart" style={{"textDecoration":"none"}}>Cart</Link>
-                    {<div className="item-amount"> {cart.length} </div>}
+                    {cart.length >= 1 && <div className="item-amount"> {cart.length} </div>}
                 </div> 
             </>
         )

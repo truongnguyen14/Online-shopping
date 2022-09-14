@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: rgb(204, 212, 214) solid;
 }
 .item-description {
@@ -55,6 +55,11 @@
     color: white;
     border: none;
     border-radius: 5px;
+    min-width: 50px;
+    font-size: 20px;
+}
+.item-cart .button-container .remove_button{
+    font-size: large;
     min-width: 100px;
 }
 .item-cart>.button-container>button:hover{

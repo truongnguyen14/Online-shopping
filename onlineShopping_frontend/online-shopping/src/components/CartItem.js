@@ -1,7 +1,8 @@
 import React from "react";
 import "./CartItem.css"
 export default function CartItem(props){
-    const {item,onAdd,onRemove} = props
+    const {item,decrement,increment,remove} = props
+    
     return(
           <div className="item-cart">
                         <div className="item-description">
@@ -13,10 +14,14 @@ export default function CartItem(props){
                             </div>
                         </div>
                         <div className="button-container">
-                            <div className="price">Amount: {item.qty} X ${item.price}</div>
-                            <button  onClick={onRemove}>delete</button>    
-                            <button style={{"backgroundColor":"green"}}  onClick={onRemove}>Add</button>   
+                            <div className="price">Amount: {item.quantity} X ${item.price}</div>
+                            <button  onClick={()=>decrement(item._id)}>-</button>    
+                            <button style={{"backgroundColor":"green"}}  onClick={()=>increment(item._id)}>+</button>   
+                            <button className="remove_button" onClick={()=>remove(item._id)} >
+                                Remove
+                            </button>
                         </div>
+                       
             </div>
     )
 }

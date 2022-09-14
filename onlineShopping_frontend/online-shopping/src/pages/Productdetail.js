@@ -14,6 +14,7 @@ function Productdetail(props) {
     const params = useParams()
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
+    const addCart = state.userAPI.addCart
     const [detailproduct, setDetailproduct] = useState([])
   
 
@@ -49,7 +50,7 @@ function Productdetail(props) {
                             <h5><b>Categories: </b>{detailproduct.category}</h5>
                             <h5>Sold: {detailproduct.sold}</h5>
                             <div className="productinfo button" style={{"alignSelf":"center"}}>
-                                <button className="btn btn-primary">Add to cart</button>
+                                <button className="btn btn-primary" onClick={(()=>addCart(detailproduct))} >Add to cart</button>
                             </div>
                         </div>
                     </div>			
