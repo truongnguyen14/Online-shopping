@@ -61,7 +61,7 @@ export default function App(){
                         <Route path="/register" element={<Register/>}/>
                         <Route path="/cart" element={<Cart onAdd={onAdd} onRemove={onRemove} money={money.current} cartItems={cartItems}/>}/>
                         <Route path="/product/find/:id" element={<Productdetail onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>} />
-                        <Route path="/categories/:title" element={<Categories onAdd={onAdd} products={products} categories={categories}/>} />
+                        <Route path="/categories/:name" element={<Categories onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}} />
                     </Routes>
                 </BrowserRouter> 
             </div>
