@@ -65,7 +65,7 @@ export default function Nav(props){
                 <button>find</button>
             </div>
             <div className="options">
-                <div><Link to="" style={{"textDecoration":"none"}}>{isAdmin ? 'Products' : 'Shop'}</Link></div>
+                <div><Link to="/" style={{"textDecoration":"none"}}>{isAdmin ? 'Products' : 'Shop'}</Link></div>
                 {isAdmin && adminRouter()}
                 {
                     isLogged ? loggedRouter() : (<div>
