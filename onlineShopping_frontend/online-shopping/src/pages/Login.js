@@ -69,7 +69,7 @@ function Login(){
                  {error.password && <span className='error'>{error.password}</span>}
                 <div className="row">
                     <button id="submit" type="submit">Login</button>
-                    <p>--New to RMIT--</p>
+                    <p>--New to PAWNSHOP--</p>
                     <Link to="/register">Register</Link>
                 </div>
             </form>
