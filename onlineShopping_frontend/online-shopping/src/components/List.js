@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState, useEffect, useContext} from 'react'
 import "./list.css"
-import { categoriesData } from "../data";
 import { Link } from "react-router-dom";
+import { GlobalState } from "../GlobalState";
 
 export default function List(){
-    const {categories} = categoriesData
+  const state = useContext(GlobalState)
+    const [categories] = state.categoriesAPI.categories
     return(
             <ul className="list small">
-                {categories.map((data)=>
-                  <Link to={`/categories/${data.title}`}>
-                          <li className="menu-list">{data.title}</li>  
+                {categories.map((category)=>
+                  <Link to={`/categories/${category.name}`}>
+                          <li className="menu-list">{category.name}</li>  
                   </Link>
                 )}
             </ul>
