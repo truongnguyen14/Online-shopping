@@ -9,7 +9,7 @@ export default function List(){
             <ul className="list small">
                 {categories.map((data)=>
                   <Link to={`/categories/${data.title}`}>
-                          <li>{data.title}</li>  
+                          <li className="menu-list">{data.title}</li>  
                   </Link>
                 )}
             </ul>
