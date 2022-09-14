@@ -59,11 +59,6 @@ export default function Nav(props){
                                 <div>{isAdmin ? 'Admin' : 'PAWN SHOP'}</div>
                         </div>
                     </Link>
-
-            <div className="search_bar">
-                <input></input>
-                <button>find</button>
-            </div>
             <div className="options">
                 <div><Link to="/" style={{"textDecoration":"none"}}>{isAdmin ? 'Products' : 'Shop'}</Link></div>
                 {isAdmin && adminRouter()}
