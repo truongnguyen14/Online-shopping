@@ -10,10 +10,9 @@ export default function Footer(){
   
             <div className="footer-infos">
                 <div className="footer-info-container">
-                    <h1 className="footer-title">About</h1>
-                    <p className="footer-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                    of type and scrambled it to make a type specimen book</p>
+                    <h1 className="footer-title">About Us</h1>
+                    <p className="footer-description">We are group 10. Member of this project: Nguyen Tan Truong, Nguyen Manh Quoc Viet,
+                        Nguyen Tien Dat, Duc Anh Hoang, Dung Nguyen, Kelbin Lei</p>
                 </div>
                  <div className="footer-info-container">
                     <h1 className="footer-title">Categories</h1>
