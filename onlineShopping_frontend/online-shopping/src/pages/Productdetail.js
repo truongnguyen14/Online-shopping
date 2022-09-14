@@ -41,7 +41,7 @@ function Productdetail(props) {
             <div className="product">			
                         <div className="row">
                         <div className="col-md-5 box1">
-                            <img src={detailproduct.img.url} class="poster-image"></img>
+                            <img src={detailproduct.img.url} className="poster-image"></img>
                         </div>
                         <div className="col box2">
                             <h1 className="productinfo-title"><b>{detailproduct.title}</b></h1>
