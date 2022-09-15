@@ -4,12 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    //"dev": "nodemon server.js"
-    "dev": "nodemon app.js",
-    "client": "npm start --prefix ../onlineShopping_frontend",
-    "server": "nodemon server.js --ignore onlineShopping_frontend",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
